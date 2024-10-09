@@ -1,0 +1,98 @@
+.footer {
+  display: flex;
+  justify-content: space-around;
+  margin: 2rem 5rem;
+}
+.left-f {
+  flex: 1;
+}
+.left-f p {
+  border: 3px solid;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 5rem;
+  margin-left: 5rem;
+  width: fit-content;
+}
+.right-f {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.right-f ul {
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  color: rgb(94, 94, 74);
+  font-family: "Wix Madefor Text", sans-serif;
+  letter-spacing: 0.2rem;
+}
+.right-f ul li {
+  list-style: none;
+  margin-top: 0.3rem;
+}
+.right-f ul li a {
+  text-decoration: none;
+  font-size: 0.8rem;
+  color: rgb(94, 94, 74);
+  letter-spacing: 0.1rem;
+}
+
+.right-f ul:nth-of-type(5) {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  grid-column: 2/3;
+}
+.right-f ul li a img {
+  width: 1rem;
+  height: 1.2rem;
+}
+
+@media (max-width:768px) {
+  .footer {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0;
+  }
+
+  .left-f p {
+    border: 3px solid;
+    padding: 0.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 5rem;
+    margin-left: 5rem;
+    margin: 3rem auto;
+  }
+  .right-f {
+    justify-items: center
+  }
+  .right-f ul {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-left: -2rem;
+  }
+  .right-f ul li {
+    list-style: none;
+    margin-top: 0.5rem;
+  }
+  .right-f ul li a {
+    text-decoration: none;
+    font-size: 0.7rem;
+    color: rgb(94, 94, 74);
+    letter-spacing: 0.1rem;
+  }
+  
+  .right-f ul:nth-of-type(5) {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    grid-column: 2/3;
+  }
+  .right-f ul li a img {
+    width: 0.8rem;
+    height: 1rem;
+  }
+  
+}

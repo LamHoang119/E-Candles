@@ -1,0 +1,85 @@
+.blog {
+  display: flex;
+  flex-direction: column;
+  background: rgb(215 215 203 / 30%);
+  padding: 3rem 0;
+}
+.blog h1 {
+  text-align: center;
+  font-weight: lighter;
+  margin-bottom: 3rem;
+  font-size: 2.5rem;
+  color: black;
+  letter-spacing: 0.3rem;
+  font-family: "Wix Madefor Text", sans-serif;
+  margin-bottom: 4rem;
+}
+.candles-blog-items {
+  width: 57%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  
+}
+.blog-item {
+  width: 80%;
+  margin: 1rem auto;
+}
+.blog-item h2 {
+  font-family: "Wix Madefor Text", sans-serif;
+  color: rgb(94, 94, 74);
+  font-weight: 500;
+}
+.blog-item p {
+  font-family: "Wix Madefor Text", sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+  color: rgb(94, 94, 74);
+}
+.blog button {
+  padding: 0.7rem 0;
+  border-radius: 0;
+  color: #fff;
+  background: rgb(94, 94, 74);
+  border: 1px solid rgb(94, 94, 74);
+  font-family: "Wix Madefor Text", sans-serif;
+  transition: 0.3s;
+  cursor: pointer;
+  width: 9rem;
+  margin: 0 auto;
+  margin-top: 3rem;
+}
+.blog button:hover {
+  color: #000;
+  background-color: #fff;
+}
+@media (max-width:768px) {
+  .blog h1 {
+    font-size: 2rem;
+  }
+  .candles-blog-items {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .blog-item {
+    width: 15rem;
+    margin: 1rem auto;
+  }
+  .blog-item h2 {
+    font-family: "Wix Madefor Text", sans-serif;
+    color: rgb(94, 94, 74);
+    font-weight: 500;
+  }
+  .blog-item p {
+    font-family: "Wix Madefor Text", sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+    color: rgb(94, 94, 74);
+  }
+}
+@media (max-width:450px) {
+  .blog-item{
+    width: 80%;
+  }
+}

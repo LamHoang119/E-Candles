@@ -1,0 +1,143 @@
+.nav-bar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 12rem;
+  position: relative;
+}
+.nav-list {
+  margin-left: 4rem;
+}
+.nav-list ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+}
+.nav-list ul li {
+  color: rgb(94, 94, 74);
+  font-size: 1rem;
+  cursor: pointer;
+  position: relative;
+}
+.nav-list ul li:after {
+  content: "";
+  position: absolute;
+  background-color: rgb(94, 94, 74);
+  height: 2px;
+  width: 0;
+  left: 0;
+  bottom: -10px;
+  transition: 0.2s;
+}
+.nav-list ul li:hover::after {
+  width: 100%;
+}
+
+.nav-login-cart {
+  display: flex;
+  gap: 4rem;
+  justify-content: flex-end;
+  margin-right: 4rem;
+}
+
+.nav-login-cart div {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+}
+
+.nav-login-cart div p {
+  margin-left: 0.2rem;
+}
+
+.nav-login-cart div img {
+  height: 1.3rem;
+}
+
+.nav-logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 3px solid;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #000;
+  margin-top: -1.5rem;
+}
+.btn-logout{
+  border: none;
+  background: transparent;
+  color: rgb(94, 94, 74);
+  font-weight: bold;
+}
+.menu-icon {
+  height: 1.5rem;
+  display: none;
+}
+.cart {
+  position: relative;
+}
+.cart .nav-cart-count {
+  position: absolute;
+  bottom: 50%;
+  right: 50%;
+  font-size: 0.7rem;
+  padding: 0 0.3rem;
+  border-radius: 999px;
+  background: red;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+
+  .menu-icon {
+    display: block;
+    cursor: pointer;
+    margin-left: 0.5rem;
+  }
+  .nav-list {
+    position: relative;
+    margin: 0;
+  }
+  .nav-list ul {
+    width: 10rem;
+    height: 22rem;
+    justify-content: center;
+    position: fixed;
+    z-index: 9;
+    flex-direction: column;
+    background: #ffffff;
+    transition: 0.5s;
+  }
+  .nav-list ul li {
+    text-align: end;
+    margin: 0 1rem;
+  }
+  .hide-mobile-menu {
+    left: -12rem;
+  }
+  .nav-logo {
+    padding: 0.5rem;
+    font-size: 1rem;
+  }
+  .nav-login-cart {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+    margin-right: 0.5rem;
+  }
+  .nav-login-cart div img {
+    height: 1rem;
+  }
+  .nav-login-cart .login img {
+    display: none;
+  }
+  .nav-login-cart .login p {
+    font-size: 0.8rem;
+  }
+}
