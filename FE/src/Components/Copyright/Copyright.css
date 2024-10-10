@@ -1,0 +1,10 @@
+.copyright{
+    background: rgb(94, 94, 74);
+    color: #fff;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;justify-content: center;
+    letter-spacing: 0.1rem;
+    font-family: "Wix Madefor Text", sans-serif;
+
+}

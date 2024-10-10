@@ -1,0 +1,78 @@
+.naturally-simple {
+  display: flex;
+  flex-direction: column;
+  height: 80rem;
+  padding: 2rem 0;
+}
+.naturally-content {
+  width: 30%;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+.naturally-content h1 {
+  text-align: center;
+    font-weight: lighter;
+    font-family: "Wix Madefor Text", sans-serif;
+    letter-spacing: 0.2rem;
+    font-size: 2.5rem;
+}
+.naturally-content p{
+    line-height: 1.8rem;
+    color: rgb(94, 94, 74);
+    font-size: 1.1rem;
+    margin: 2rem 0;
+}
+.naturally-content button{
+    padding: 0.7rem 2rem;
+    border-radius: 0;
+    background: #fff;
+    border: 1px solid #000;
+    font-family: "Wix Madefor Text", sans-serif;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.naturally-content button:hover{
+    color: #fff;
+    background: rgb(94, 94, 74);
+}
+.naturally-image{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+}
+.naturally-image img:nth-of-type(1){
+    width: 45%;
+}
+.naturally-image img:nth-of-type(2){
+    position: absolute;
+    top: 10rem;
+}
+@media (max-width:768px) {
+    .naturally-simple {
+        height: 60rem;
+      }
+    .naturally-content {
+        width: 100%;
+        margin: 0 auto;
+        margin-bottom: 2rem;
+      }
+      .naturally-content p{
+        font-size: 1rem;
+      }
+      .naturally-image{
+          display: flex;
+          flex-direction: column;
+          position: relative;
+          align-items: center;
+      }
+      .naturally-image img:nth-of-type(1){
+          width: 100%;
+      }
+      .naturally-image img:nth-of-type(2){
+          position: absolute;
+          top: 7rem;
+          width: 60%;
+      }  
+}

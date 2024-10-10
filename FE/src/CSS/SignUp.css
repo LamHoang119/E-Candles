@@ -1,0 +1,160 @@
+.signup-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(215, 215, 203);
+    width: 50%;
+    margin: 0 auto;
+  }
+  .signup-container .logo-l {
+    background: rgb(94, 94, 74);
+    color: #fff;
+    flex: 1;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  .signup-container .logo-l img{
+    height: 35rem;
+    width: 20rem;
+    object-fit: cover;
+    mask-image: linear-gradient(to left, transparent, black 20%, black 90%, transparent);
+  }
+  .signup-r {
+    display: flex;
+    flex-direction: column;
+    margin:0 2rem;
+  }
+  .signup-r p:nth-of-type(1) {
+    font-size: 3rem;
+    margin: 0 0;
+  }
+  .signup-r p:nth-of-type(2) {
+    font-size: 5rem;
+    font-weight: bold;
+    margin: -1rem 0 0rem 0;
+  }
+  .input {
+    position: relative;
+  }
+  .input input {
+    padding: 1rem 12rem 1rem 1rem;
+    margin: 0.5rem 0;
+  }
+  .input img {
+    position: absolute;
+    height: 1rem;
+    top: 1.5rem;
+    right: 5.5rem;
+  }
+  .signup-signup button {
+    margin-top: 1rem;
+    padding: 0.7rem 2rem;
+    border-radius: 0;
+    background: #fff;
+    border: 1px solid #000;
+    font-family: "Wix Madefor Text", sans-serif;
+    transition: 0.3s;
+    cursor: pointer;
+  }
+  .signup-signup button:nth-of-type(1) {
+    margin-right: 1rem;
+  }
+  .signup-signup button:nth-of-type(2) {
+    background: rgb(94, 94, 74);
+    color: #fff;
+  }
+  .signup-signup button:hover {
+    color: #fff;
+    background: rgb(94, 94, 74);
+  }
+  .signup-signup button:nth-of-type(2):hover {
+    background: #fff;
+    color: rgb(94, 94, 74);
+  }
+  .follow {
+    display: flex;
+    align-items: center;
+    margin-top: 4rem;
+  }
+  .follow span {
+    font-size: 1rem;
+  }
+  .follow img {
+    height: 1rem;
+    width: auto;
+    margin: 0 0.5rem;
+  }
+  @media (max-width: 768px) {
+    .signup-page {
+      width: 100%;
+    }
+    .logo-l {
+      display: none;
+    }
+    .signup-r {
+      width: 50%;
+      margin: 0.5rem 1rem;
+    }
+    .signup-r p:nth-of-type(1) {
+      font-size: 2rem;
+      margin: 0 0;
+    }
+    .signup-r p:nth-of-type(2) {
+      font-size: 3rem;
+      font-weight: bold;
+      margin: -1rem 0 0rem 0;
+    }
+    .input {
+      position: relative;
+    }
+    .input input {
+      width: 100%;
+      padding: 1rem 0;
+      margin: 0.5rem 0;
+    }
+    .input img {
+      right: 1rem;
+    }
+    .signup-signup button {
+      font-size: 0.8rem;
+      margin-top: 1rem;
+      padding: 0.5rem 1.8rem;
+      border-radius: 0;
+      background: #fff;
+      border: 1px solid #000;
+      font-family: "Wix Madefor Text", sans-serif;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+  
+    .signup-signup button:nth-of-type(1) {
+      margin-right: 1rem;
+    }
+    .signup-signup button:nth-of-type(2) {
+      background: rgb(94, 94, 74);
+      color: #fff;
+    }
+    .signup-signup button:hover {
+      color: #fff;
+      background: rgb(94, 94, 74);
+    }
+    .signup-signup button:nth-of-type(2):hover {
+      background: #fff;
+      color: rgb(94, 94, 74);
+    }
+    .follow {
+      display: flex;
+      align-items: center;
+      margin-top: 4rem;
+    }
+    .follow span {
+      font-size: 1rem;
+    }
+    .follow img {
+      height: 1rem;
+      width: auto;
+      margin: 0 0.5rem;
+    }
+  }
+  

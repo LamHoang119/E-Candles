@@ -1,0 +1,115 @@
+.our-story{
+    display: flex;
+    flex-direction: column;
+    gap: 10rem;
+}
+.re-connecting-1{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.re-connecting-1 img{
+    width: 45rem;
+}
+.re-connecting-1 div{
+    width: 35rem;
+    font-family: "Wix Madefor Text", sans-serif;
+}
+.re-connecting-1 div h1{
+    font-size: 4rem;
+    font-weight: lighter;
+}
+.re-connecting-1 div p{
+    font-size: 1.2rem;
+    letter-spacing: 0.1rem;
+    line-height: 2rem;
+    color: rgb(94, 94, 74);
+}
+.re-connecting-2{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    background: rgb( 215,215,203 );
+}
+.re-connecting-2 img{
+    height: 60rem;
+    width: 60rem;
+    object-fit: cover;
+}
+.re-connecting-2 div{
+    width: 30rem;
+    margin: 0 auto;
+    gap: 1rem;
+}
+.re-connecting-2 div h1{
+    font-size: 3rem;
+    font-weight: lighter;
+    font-family: "Wix Madefor Text", sans-serif;
+
+}
+.re-connecting-2 div p{
+    font-family: "Wix Madefor Text", sans-serif;
+    color: rgb(94, 94, 74);
+    line-height: 1.8rem;
+    gap: 1rem;
+    font-size: 1.1rem;
+}
+.re-connecting-3{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10rem;
+}
+.re-connecting-3 img{
+    width: 120rem;
+    height: 45rem;
+    object-fit: cover;
+}
+@media (max-width:768px) {
+    .our-story{
+        gap: 3rem;
+    }
+    .re-connecting-1{
+        flex-direction: column;
+    }
+    .re-connecting-1 img{
+        width: 80%;
+    }
+    .re-connecting-1 div{
+        width: 80%;
+    }
+    .re-connecting-1 div h1{
+        margin: 1rem 1rem;
+        font-size: 2rem;
+    }
+    .re-connecting-1 div p{
+        margin: 1rem 1rem;
+        font-size: 1rem;
+    }
+    /* ////////////// */
+    .re-connecting-2{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .re-connecting-2 div{
+        width: 80%;
+    }
+    .re-connecting-2 img{
+        height: max-content;
+        margin-top: 1rem;
+        width: 80%;
+        object-fit: contain;
+    }
+    .re-connecting-2 div h1{
+        margin-left: 1rem;
+        font-size: 2rem;
+        font-weight: bold;
+    
+    }
+    .re-connecting-2 div p{
+        margin: 0 1rem;
+        font-size: 1rem;
+    }
+    .re-connecting-3{
+        display: none;
+    }
+}
