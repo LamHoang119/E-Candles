@@ -74,6 +74,7 @@
   background: transparent;
   color: rgb(94, 94, 74);
   font-weight: bold;
+  cursor: pointer;
 }
 .menu-icon {
   height: 1.5rem;

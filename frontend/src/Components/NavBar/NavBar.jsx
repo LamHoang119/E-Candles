@@ -30,7 +30,6 @@ const NavBar = () => {
   }, []);
 
   const handleLogout = () => {
-    // Xử lý đăng xuất
     localStorage.removeItem("token");
     localStorage.removeItem("username"); 
     setUsername(null); 

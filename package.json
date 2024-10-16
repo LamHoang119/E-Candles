@@ -2,9 +2,5 @@
   "dependencies": {
     "react-router-dom": "^6.23.1",
     "react-scripts": "^5.0.1"
-  },
-  "scripts": {
-  "build": "cd frontend && react-scripts build"
-}
-
+  }
 }

@@ -15,10 +15,11 @@ router.post('/signup', async (req, res) => {
             return res.status(400).json({ message: 'User already exists' });
         }
 
-        // Không mã hóa mật khẩu
+        const hashedPassword = await bcrypt.hash(password, 12);
+
         const newUser = new User({
             username,
-            password,  // Lưu mật khẩu dưới dạng thuần văn bản
+            password: hashedPassword,
         });
 
         await newUser.save();
@@ -27,6 +28,7 @@ router.post('/signup', async (req, res) => {
         res.status(500).json({ message: 'Something went wrong' });
     }
 });
+
 
 
 
@@ -40,8 +42,8 @@ router.post('/login', async (req, res) => {
             return res.status(400).json({ message: 'User not found' });
         }
 
-        // So sánh trực tiếp mật khẩu
-        if (password !== user.password) {
+        const isPasswordCorrect = await bcrypt.compare(password, user.password);
+        if (!isPasswordCorrect) {
             return res.status(400).json({ message: 'Invalid credentials' });
         }
 

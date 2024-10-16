@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import "../CSS/Address.css";
+import { ShopContext } from "../Context/ShopContext";
 
 const Address = () => {
+  const {resetCart} = useContext(ShopContext);
+
   const [result, setResult] = React.useState("");
 
   const onSubmit = async (event) => {
@@ -21,6 +24,7 @@ const Address = () => {
     if (data.success) {
       setResult("Ordered Successfully");
       event.target.reset();
+      resetCart();
     } else {
       console.log("Error", data);
       setResult(data.message);
@@ -60,7 +64,7 @@ const Address = () => {
         <textarea class="form-textarea" id="message" name="message" placeholder="Your address"></textarea>
       </div>
     </div>
-    <button class="form-submit" type="submit">Buy Now !</button>
+    <button class="form-submit" type="submit" style={{cursor:"pointer"}}>Buy Now !</button>
   </form>
   <span>{result}</span>
 
