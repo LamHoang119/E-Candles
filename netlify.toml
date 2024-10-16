@@ -1,4 +1,9 @@
+[build]
+command = "npm run build"
+publish = "frontend/build"
+
 [[redirects]]
-from ="/*"
-to = "frontend/public/index.html"
+from = "/*"
+to = "/index.html"
 status = 200
+force = true
