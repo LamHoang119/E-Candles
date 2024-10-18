@@ -1,18 +1,15 @@
-import React, { useContext, useState, useEffect } from "react";
+import React, { useContext, useState } from "react";
 import "./Navbar.css";
 import login_icon from "../Assets/circle-user-regular.png";
-import logout_icon from "../Assets/right-from-bracket-solid.png";
 import cart_icon from "../Assets/bag-shopping-solid.png";
 import gift_icon from "../Assets/gift-solid.png";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { ShopContext } from "../../Context/ShopContext";
 import menu_icon from "../Assets/bars-solid.png";
 
 const NavBar = () => {
-  const { getTotalCartItems, resetCart } = useContext(ShopContext);
+  const { getTotalCartItems } = useContext(ShopContext);
   const [mobileMenu, setMobileMenu] = useState(false);
-  const [username, setUsername] = useState(null); 
-  const navigate = useNavigate();
 
   const toggleMenu = () => {
     setMobileMenu((prevState) => !prevState);
@@ -20,21 +17,6 @@ const NavBar = () => {
 
   const handleMenuClick = () => {
     setMobileMenu(false);
-  };
-
-  useEffect(() => {
-    const user = localStorage.getItem("username");
-    if (user) {
-      setUsername(user);
-    }
-  }, []);
-
-  const handleLogout = () => {
-    localStorage.removeItem("token");
-    localStorage.removeItem("username"); 
-    setUsername(null); 
-    resetCart(); 
-    navigate("/");
   };
 
   return (
@@ -107,27 +89,15 @@ const NavBar = () => {
         <div className="nav-logo">H-CANDLES</div>
       </Link>
       <div className="nav-login-cart">
-        {username ? (
+        <Link
+          to="/login"
+          style={{ textDecoration: "none", color: "rgb(94,94,74)" }}
+        >
           <div className="login">
-            <img src={logout_icon} alt="" />
-            <button
-              className="btn-logout"
-              onClick={handleLogout}
-            >
-              Logout
-            </button>
+            <img src={login_icon} alt="" />
+            <p>Login</p>
           </div>
-        ) : (
-          <Link
-            to="/login"
-            style={{ textDecoration: "none", color: "rgb(94,94,74)" }}
-          >
-            <div className="login">
-              <img src={login_icon} alt="" />
-              <p>Login</p>
-            </div>
-          </Link>
-        )}
+        </Link>
         <div className="gift">
           <Link to="/gift">
             {" "}

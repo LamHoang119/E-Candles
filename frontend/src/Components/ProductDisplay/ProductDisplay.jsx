@@ -6,22 +6,9 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { ShopContext } from "../../Context/ShopContext";
-import { useNavigate } from "react-router-dom";
 
 const ProductDisplay = (props) => {
-  const { addToCart } = useContext(ShopContext);
-  const navigate = useNavigate();
-
-  const handleAddToCart = () => {
-    const username = localStorage.getItem("username");
-    
-    if (username) {
-      addToCart(product.id);
-    } else {
-      alert("Vui lòng đăng nhập để thêm sản phẩm vào giỏ hàng.");
-      navigate("/login");
-    }
-  };
+const {addToCart}= useContext(ShopContext);
 
   const settings = {
     dots: true,
@@ -85,7 +72,7 @@ const ProductDisplay = (props) => {
             </p>
             {product.new_price && <p>${product.new_price}</p>}
           </div>
-          <button className="add-to-cart" onClick={handleAddToCart}>Add to Cart</button>
+          <button className="add-to-cart" onClick={()=>{addToCart(product.id)}}>Add to Cart</button>
           <button className="buy-now">Buy Now</button>
           <div className="product-des">
             <div>
